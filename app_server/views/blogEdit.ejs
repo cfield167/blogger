@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="blogger">
+  <head>
+    <title>Blog Edit</title>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="/js/angular-ui-router.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href='/css/bootstrap.min.css' />
+    <link rel="stylesheet" href='/css/fontawesome-all.css' />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">My Blog</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/blogList">List Blogs</a>
+        <a class="nav-item nav-link active" href="/blogAdd">Add Blog</a>
+        </div>
+    </div>
+  </nav>
+<p></p>
+   <form method="POST" action="/blogEdit/edit/<%=blog._id%>">
+     <div class="form-group">
+      <label for="blogTitle">Blog Title</label>
+      <input type="text" class="form-control" id="blogTitle" name="blogTitle" value="<%=blog.blogTitle%>"><br>
+     </div>
+     <div class="form-group">
+      <label for="blogText">Blog Text</label>
+      <textarea rows="5" cols="40" name="blogText" class="form-control"><%=blog.blogText%></textarea><br>
+     </div>
+     <a href="/blogList">
+      <button class="btn btn-primary float-right ng-scope" value="Cancel">Cancel</button>
+     </a>
+      <input type="submit" class="btn btn-danger float-right" value="Confirm Edit">
+   </form>
+  </body>
+</html>

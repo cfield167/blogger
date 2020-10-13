@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="blogger">
+  <head>
+    <title>Blog Add</title>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="/js/angular-ui-router.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href='/css/bootstrap.min.css' />
+    <link rel="stylesheet" href='/css/fontawesome-all.css' />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">My Blog</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/blogList">List Blogs</a>
+        <a class="nav-item nav-link active" href="/blogAdd">Add Blog</a>
+        </div>
+    </div>
+  </nav>
+<p></p>
+  <div class="card border-primary" style="width:75%">
+  <form method="POST" action="/blogAdd" style="padding:20px">
+    <div class="form-group">
+      <label for="blogTitle">Blog Title</label>
+      <input type="text" class="form-control" id="blogTitle" name="blogTitle"><br>
+      <label for="blogText">Blog Text</label>
+      <textarea rows="4" name="blogText" class="form-control"></textarea><br>
+    </div>
+      <a href='/blogList'>
+      <button type="submit" class="btn btn-primary" value="Add Blog">Add Blog</button>
+      </a>
+   </form>
+  </div>
+
+  </body>
+</html>
