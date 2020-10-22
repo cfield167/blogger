@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 require('./app_api/models/db');
 
-var routes = require('./app_server/routes/index');
+
 var routesAPI = require('./app_api/routes/index');
 
 var app = express();
@@ -21,19 +21,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'app_client')));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); //redirect bootstrap JS
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); //redirect jquery
+app.use('/js', express.static(__dirname + '/app_client/lib')); //redirect angular
 app.use('/js', express.static(__dirname + '/node_modules/angular'));
+app.use('/js', express.static(__dirname + '/node_modules/angular-route'));
+app.use('/js', express.static(__dirname + '/node_modules/angular-ui-router/release'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); //redirect css bootstrap
 app.use('/css', express.static(__dirname + '/public/stylesheets')); 
 app.use('/webfonts', express.static(__dirname + '/public/fonts/webfonts/')); 
 
-app.use('/', routes);
-app.use('/blogAdd', routes);
-app.use('/blogList', routes);
-app.use('/blogEdit', routes);
-app.use('/blogDelete', routes);
 app.use('/api', routesAPI);
+app.use(function(req, res){
+  res.sendFile(path.join(__dirname, 'app_client', 'index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
