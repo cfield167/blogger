@@ -10,25 +10,37 @@ app.config(function($routeProvider){
     })
     .when('/blogList', {
        templateUrl: 'sites/blogList.html',
-          controller: 'listController',
+       controller: 'listController',
        controllerAs: 'vm'
     })
     .when('/blogAdd', {
       templateUrl: 'sites/blogAdd.html',
-          controller: 'addController',
+      controller: 'addController',
       controllerAs: 'vm'
     })
     .when('/blogEdit/:id', {
        templateUrl: 'sites/blogEdit.html',
-          controller: 'editController',
+       controller: 'editController',
        controllerAs: 'vm'
     })
     .when('/blogDelete/:id', {
        templateUrl: 'sites/blogDelete.html',
-          controller: 'deleteController',
+       controller: 'deleteController',
        controllerAs: 'vm'
    })
+   .when('/register', {
+      templateUrl: '/common/auth/register.view.html',
+      controller: 'RegisterController',
+      controllerAs: 'vm'
+   })
+   .when('/login', {
+      templateUrl: '/common/auth/login.view.html',
+      controller: 'LoginController',
+      controllerAs: 'vm'
+   })
   .otherwise({redirectTo: '/'});
+
+ // $locationProvider.html5Mode(true);
  });
 
 //state provider
@@ -50,16 +62,16 @@ function getBlogById($http, id){
   return $http.get('/api/blogs/' + id);
 }
 
-function updateBlogById($http , id, data){
-  return $http.put('/api/blogs/' + id, data);
+function updateBlogById($http, authentication, id, data){
+  return $http.put('/api/blogs/' + id, data, {headers: { Authorization: 'Bearer ' + authentication.getToken() }});
 }
 
-function addBlog($http, data){
-  return $http.post('/api/blogs/', data);
+function addBlog($http, authentication, data){
+  return $http.post('/api/blogs/', data, { headers: { Authorization: 'Bearer '+ authentication.getToken() }} );
 }
 
-function deleteBlogById($http, id){
-  return $http.delete('/api/blogs/' + id);
+function deleteBlogById($http, authentication, id){
+  return $http.delete('/api/blogs/' + id, { headers: { Authorization: 'Bearer '+ authentication.getToken() }} );
 }
 
 //controllers
@@ -71,7 +83,7 @@ app.controller('homeController', function homeController(){
   vm.message = "Hope you enjoy my blogs!";
 });
 
-app.controller('listController', function listController($http){
+app.controller('listController', [ '$http', 'authentication', function listController($http, authentication){
   var vm = this;
   vm.pageHeader = {
     title: 'Blog List'
@@ -80,14 +92,15 @@ app.controller('listController', function listController($http){
   getAllBlogs($http)
     .success(function (data){
     vm.blogs = data;
+    vm.isLoggedIn = authentication.isLoggedIn();
     vm.message = "Blogs found";
     })
     .error(function(e) {
       vm.message = "Couldn't get the blogs"
     });
-});
+}]);
 
-app.controller('addController', [ '$http', '$routeParams', '$state', function addController($http, $routeParams, $state){
+app.controller('addController', [ '$http', '$routeParams', '$state', 'authentication', function addController($http, $routeParams, $state, authentication){
    var vm = this;
    vm.blog ={};
    vm.pageHeader = {
@@ -99,7 +112,7 @@ app.controller('addController', [ '$http', '$routeParams', '$state', function ad
      data.blogTitle = userForm.blogTitle.value;
      data.blogText = userForm.blogText.value;
 
-     addBlog($http, data)
+     addBlog($http, authentication, data)
      .success(function(data){
        vm.message = "Post Added";
        $state.go('blogList');
@@ -110,7 +123,7 @@ app.controller('addController', [ '$http', '$routeParams', '$state', function ad
    }
 }]);
 
-app.controller('editController', [ '$http', '$routeParams', '$state', function editController($http, $routeParams, $state){
+app.controller('editController', [ '$http', '$routeParams', '$state', 'authentication', function editController($http, $routeParams, $state, authentication){
    var vm = this;
    vm.blog = {};
    vm.id = $routeParams.id;
@@ -118,7 +131,7 @@ app.controller('editController', [ '$http', '$routeParams', '$state', function e
      title: 'Blog Edit'
    };
 
-   getBlogById($http, vm.id)
+   getBlogById($http,vm.id)
      .success(function(data) {
        vm.blog = data;
        vm.message = "Blog data found!";
@@ -132,7 +145,7 @@ app.controller('editController', [ '$http', '$routeParams', '$state', function e
        data.blogTitle = userForm.blogTitle.value;
        data.blogText = userForm.blogText.value;
 
-      updateBlogById($http, vm.id, data)
+      updateBlogById($http, authentication, vm.id, data)
         .success(function(data) {
            vm.message = "Blog data updated";
            $state.go('blogList');
@@ -143,7 +156,7 @@ app.controller('editController', [ '$http', '$routeParams', '$state', function e
    }
 }]);
 
-app.controller('deleteController', [ '$http', '$routeParams', '$state', function deleteController($http, $routeParams, $state) {
+app.controller('deleteController', [ '$http', '$routeParams', '$state', 'authentication', function deleteController($http, $routeParams, $state, authentication) {
     var vm = this;
     vm.blog = {};
     vm.id = $routeParams.id;
@@ -162,7 +175,7 @@ app.controller('deleteController', [ '$http', '$routeParams', '$state', function
 
     vm.submit = function() {
         var data = {};
-        deleteBlogById($http, vm.id)
+        deleteBlogById($http, authentication, vm.id)
           .success(function(data) {
             vm.message = "Blog data deleted!";
             $state.go('blogList');

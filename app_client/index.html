@@ -10,15 +10,9 @@
   </head>
   <body>
    <!-- Navbar -->
-   <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
-   <a class="navbar-brand" href="#/">Blog Home</a>
-   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-         <a class="nav-item nav-link active" href="#/blogList">Blog List</a>
-         <a class="nav-item nav-link active" href="#/blogAdd">Add Blog</a>
-      </div>
-   </div>
-   </nav>
+<div ng-controller="NavigationController">
+<navigation></navigation>
+</div>
 
 <!-- angular templates -->
    <script type="text/ng-template" id="sites/home.html">
@@ -41,10 +35,10 @@
          <div class="col-sm">
            <ul class="nav justify-content-end nav-pills card-header-pills">
              <li class="nav-item">
-                <a class="nav-link" href="#/blogEdit/{{blog._id}}"><i class="fas fa-edit"></i></a>
+                <a ng-if="vm.isLoggedIn" class="nav-link" href="#/blogEdit/{{blog._id}}"><i class="fas fa-edit"></i></a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" href="#/blogDelete/{{blog._id}}"> <i class="fas fa-trash-alt"></i></a>
+                <a ng-if="vm.isLoggedIn" class="nav-link" href="#/blogDelete/{{blog._id}}"> <i class="fas fa-trash-alt"></i></a>
              </li>
            </ul>
         </div>
@@ -101,9 +95,17 @@
     </div>
     </script>
 
+<!--Navigation Directive-->
+<!--<div ng-controller="NavigationController">
+   <navigation></navigation>
+</div>-->
+
 <!--Angular View-->
  <div ng-view></div>
 
+
  <script src="/bloggerApp.js"></script>
+ <script src="/auth/authentication.js"></script>
+ <script src="/nav/navigation.js"></script>
  </body>
 </html>
