@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 var blog = mongoose.model('blog');
+var User = mongoose.model('User');
 
 var sendJSONresponse = function(res, status, content) {
 res.status(status).json(content);
 };
+
 
 /*DONE GET list of blogs */
 module.exports.blogList = function(req, res) {
@@ -32,6 +34,8 @@ var buildBlogList = function(req, res, results) {
     blogList.push({
       blogTitle: obj.blogTitle,
       blogText: obj.blogText,
+      name: obj.name,
+      email: obj.email,
       createdOn: obj.createdOn,
       _id: obj._id
     });
@@ -73,7 +77,9 @@ module.exports.blogCreate = function(req, res) {
   console.log(req.body);
   blog.create({
     blogTitle: req.body.blogTitle,
-    blogText: req.body.blogText
+    blogText: req.body.blogText,
+    name: req.body.name,
+    email: req.body.email
   }, function(err, blog) {
     if (err) {
       console.log(err);

@@ -93,6 +93,8 @@ app.controller('listController', [ '$http', 'authentication', function listContr
     .success(function (data){
     vm.blogs = data;
     vm.isLoggedIn = authentication.isLoggedIn();
+    vm.getEmail = authentication.getEmail();
+    vm.getName = authentication.getName();
     vm.message = "Blogs found";
     })
     .error(function(e) {
@@ -111,6 +113,8 @@ app.controller('addController', [ '$http', '$routeParams', '$state', 'authentica
      var data = vm.blog;
      data.blogTitle = userForm.blogTitle.value;
      data.blogText = userForm.blogText.value;
+     data.name = authentication.getName();
+     data.email = authentication.getEmail();
 
      addBlog($http, authentication, data)
      .success(function(data){

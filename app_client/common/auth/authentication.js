@@ -50,6 +50,23 @@ app.service('authentication', authentication);
             };
           }
         };
+
+        var getEmail = function(){
+          if(isLoggedIn()){
+            var token = getToken();
+            var payload = JSON.parse($window.atob(token.split('.')[1]));
+            return payload.email;
+          }
+        };
+
+        var getName = function(){
+          if(isLoggedIn()){
+            var token = getToken();
+            var payload = JSON.parse($window.atob(token.split('.')[1]));
+            return payload.name;
+          }
+        };
+
         return {
           saveToken : saveToken,
           getToken : getToken,
@@ -57,7 +74,9 @@ app.service('authentication', authentication);
           login : login,
           logout : logout,
           isLoggedIn : isLoggedIn,
-          currentUser : currentUser
+          currentUser : currentUser,
+          getEmail : getEmail,
+          getName : getName
         };
 }
 

