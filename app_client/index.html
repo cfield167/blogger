@@ -26,7 +26,7 @@
    <div ng-repeat="blog in vm.blogs">
    <div class="card border-primary" style="width: 35%">
       <div class="card-header">
-      <p style="color:grey" ng-bind="blog.createdOn | 'MM/dd/yyyy hh:mm a'"></p>
+      <!--<p style="color:grey" ng-bind="blog.createdOn | 'MM/dd/yyyy hh:mm a'"></p>-->
       </div>
       <div class="card body">
           <h5 class="card-title">{{blog.blogTitle}}</h5>
@@ -96,6 +96,47 @@
       </form>
     </div>
     </script>
+
+    <script type="text/ng-template" id="sites/users.html">
+     <p></p>
+     <div ng-repeat="user in vm.users">
+      <div ng-show="vm.getEmail != user.email">
+       <hr></hr>
+       <h4 style="color: red">{{user.name}}</h4>
+       <a class="nav-item nav-link active" href="#/user/{{user._id}}">chat</a>
+      </div>
+     </div>
+    </script>
+      
+    <script type="text/ng-template" id="sites/chat.html">
+    <p></p>
+    <h1>{{vm.user.email}}</h1>
+    <div ng-repeat="chat in vm.chats">
+      <div class="card border-primary float-left" id="received" ng-show="vm.getEmail == chat.sentTo && chat.email==vm.user.email">
+          <div class="card-header"><p>{{chat.email}}</p></div>
+          <div class="card-body">
+            <p>{{chat.chatText}}</p>
+          </div>
+        <div class="card-footer"></div>
+      </div>
+      <div class="card border-primary float-right" id="sent" ng-show="vm.user.email == chat.sentTo && chat.email == vm.getEmail">
+          <div class="card-header"><p>{{chat.email}}</p></div>
+          <div class="card-body">
+            <p>{{chat.chatText}}</p>
+          </div>
+        <div class="card-footer"></div>
+      </div>
+      <div></div>
+     </div>
+     
+     <form class="chatbox" name="userForm" ng-submit="vm.submit()" ng-controller="chatController">
+     <div class="form-group">
+      <input type="chatText" class="form-control" id="chatText" rows="1" style="float: float-left" value="{{vm.reset}}">
+      <input type="submit" class="button button-danger float-right" value="Send">
+     </div>
+     </form>
+     </script>
+
 
 <!--Navigation Directive-->
 <!--<div ng-controller="NavigationController">

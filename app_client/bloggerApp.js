@@ -27,17 +27,27 @@ app.config(function($routeProvider){
        templateUrl: 'sites/blogDelete.html',
        controller: 'deleteController',
        controllerAs: 'vm'
-   })
-   .when('/register', {
+    })
+    .when('/chatList', {
+       templateUrl: 'sites/users.html',
+       controller: 'userController',
+       controllerAs: 'vm'
+    })
+    .when('/user/:id', {
+       templateUrl: 'sites/chat.html',
+       controller: 'chatController',
+       controllerAs: 'vm'
+    })
+    .when('/register', {
       templateUrl: '/common/auth/register.view.html',
       controller: 'RegisterController',
       controllerAs: 'vm'
-   })
-   .when('/login', {
+    })
+    .when('/login', {
       templateUrl: '/common/auth/login.view.html',
       controller: 'LoginController',
       controllerAs: 'vm'
-   })
+     })
   .otherwise({redirectTo: '/'});
 
  // $locationProvider.html5Mode(true);
@@ -73,6 +83,21 @@ function addBlog($http, authentication, data){
 function deleteBlogById($http, authentication, id){
   return $http.delete('/api/blogs/' + id, { headers: { Authorization: 'Bearer '+ authentication.getToken() }} );
 }
+function getUsers($http, authentication){
+  return $http.get('/api/users', {headers:{Authorization: 'Bearer ' + authentication.getToken()}});
+}
+
+function getUser($http, authentication, id){
+  return $http.get('/api/users/' + id, {headers:{Authorization: 'Bearer ' + authentication.getToken()}});
+}
+
+function getChats($http, authentication){
+  return $http.get('/api/chat', {headers:{Authorization: 'Bearer ' + authentication.getToken()}});
+}
+
+function addChat($http, /*authenticaton,*/ data){
+  return $http.post('/api/chat/', data, /*{headers:{Authorization: 'Bearer ' + authentication.getToken()}}*/);
+}
 
 //controllers
 app.controller('homeController', function homeController(){
@@ -82,6 +107,84 @@ app.controller('homeController', function homeController(){
   }
   vm.message = "Hope you enjoy my blogs!";
 });
+
+app.controller('userController', [ '$http', '$state', '$routeParams', 'authentication', function userController( $http, $state, $routeParams, authentication){
+  var vm = this;
+  vm.pageHeader = {
+    title: "User List"
+  };
+  getUsers($http, authentication)
+   .success(function (data){
+   vm.users = data;
+   vm.getEmail = authentication.getEmail();
+   vm.message = "Users Found";
+   })
+   .error(function(e){
+     vm.message = "Couldn't get Users";
+   });
+}]);
+
+app.controller('chatController', [ '$http', '$scope', '$routeParams', '$interval', 'authentication', function chatController( $http, $scope, $routeParams, $interval, authentication){
+  var vm = this;
+  vm.pageHeader = {
+    title: "Chat List"
+  };
+  vm.id = $routeParams.id;
+  vm.chat = {};
+  vm.user = {};
+
+  getUser($http, authentication, vm.id)
+   .success(function(data){
+    vm.user = data;
+    vm.message = "Got user";
+    })
+    .error(function(e){
+      vm.message = "Couldn't get user with id of " + id;
+    });
+
+  getChats($http, authentication)
+   .success(function (data){
+    vm.chats = data;
+    vm.message = "messages found";
+    vm.getEmail = authentication.getEmail();
+   })
+   .error(function(e) {
+     vm.message = "Couldn't get messages";
+   });
+
+  $scope.callAtInterval = function (){
+     console.log("Interval occurred");
+     getChats($http, authentication)
+       .success(function(data){
+          vm.chats = data;
+          vm.message = "chats found";
+       })
+       .error(function(e){
+          vm.message = "could not get chats";
+       });
+  }
+  $interval(function(){$scope.callAtInterval();}, 3000, 0, true);
+
+
+   vm.submit = function(){
+    var data = vm.chat;
+    data.sentTo = vm.user.email;
+    data.chatText = userForm.chatText.value;
+    data.email = authentication.getEmail();
+
+    addChat($http, /*authentication,*/ data)
+      .success(function(data){
+        vm.message = "Chat posted";
+        vm.reset = "";
+        //console.log("Chat Posted");
+      })
+      .error(function(e){
+        vm.message = "Couldn't post chat";
+        //console.log("Couldn't post chat");
+      });
+    }
+}]);
+
 
 app.controller('listController', [ '$http', 'authentication', function listController($http, authentication){
   var vm = this;

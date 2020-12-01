@@ -48,3 +48,4 @@ process.on('SIGTERM', function() {
 // BRING IN YOUR SCHEMAS & MODELS
 require('./blog');
 require('./users');
+require('./chat');

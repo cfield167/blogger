@@ -19,7 +19,7 @@ app.service('authentication', authentication);
         };
 
         var login = function(user) {
-           console.log('Attempting to login user ' + user.email + ' ' + user.password);
+           console.log('Attempting to login user ' + user.email);
            //$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             return $http.post('/api/login', user).success(function(data) {
               saveToken(data.token);
